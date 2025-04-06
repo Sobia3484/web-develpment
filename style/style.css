@@ -1,16 +1,16 @@
 body{
-    height: auto;
-    width: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 100%;
     background-image: url(pic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .ab1{
-    height: auto;
-    width: auto;
+    width: 100%;
+    background-image: url(birds.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(birds.jpg);
+    background-position: center;
 }
 
 .ab2{
