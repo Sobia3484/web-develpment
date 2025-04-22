@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Arsha Bootstrap Templete</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    :root {
+        --icon-color: white;
+        --text-color: white;
+        --header-color: #1f3e74;
+        --button-bgcolor: #0dcaf0;
+        --nav-bgcolor: #37517e;
+        --dropdown-border: rgb(190, 182, 182);
+        --home-bgcolor: #37517e;
+        --hmtext2-color: rgb(199, 184, 184);
+        --hover-colors: #0dcaf0;
+        --header-icons-color: rgb(180, 180, 231);
+        --about-color: #0dcaf0;
+        --about-heading: #37517E;
+        --about-text: gray;
+        --div-color: #FFFFFF;
+        --bgcolor: #F5F6F8;
+        --input-border: rgb(192, 188, 188);
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 30px;
+        z-index: 100;
+
+    }
+
+    .dropdown-menu ul li:hover .deep-menu {
+        display: block;
+    }
+
+    .navdiv ul li:hover .dropdown-menu {
+        display: block;
+    }
+
+    /* first page */
+    .container {
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+
+        }
+
+        to {
+            transform: translateY(-20px);
+
+        }
+    }
+
+    .clients {
+        animation-name: slide;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(calc(-100%/4));
+        }
+    }
+
+    #about {
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+
+        }
+
+        to {
+            transform: translateY(-20px);
+
+        }
+    }
+
+    #about-first {
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: 0.5;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+
+        }
+
+        to {
+            transform: translateY(-20px);
+
+        }
+    }
+
+    .work1 {
+        margin-right: 10px;
+        position: absolute;
+        right: 20px;
+        z-index: 100;
+    }
+
+    .services-div1:hover {
+        scale: 1.1;
+    }
+
+    /* work process divs */
+    .div1:hover {
+        scale: 1.1;
+    }
+    /* team */
+    .team-div:hover{
+        scale: 1.1;
+    }
+    /* input borders */
+    input[type="email"] {
+        border: 1px solid var(--input-border);
+    }
+
+    input[type="text"] {
+        border: 1px solid var(--input-border);
+    }
+
+    /* .abc progress {
+        background-color: blueviolet;
+        } */
+
+
+         @media only screen and (max-width: 780px) {
+            #home{
+                flex-direction: column-reverse;
+            }
+            #about{
+                height: 800px;
+                display: grid;
+            }
+            #about-first{
+                flex-direction: column-reverse;
+            }
+            .about-div1{
+                width: 1000px;
+            }
+            .work{
+                flex-direction: column;
+            }
+         }
+</style>
+
+<body class="font-sans">
+    <!-- header section -->
+    <header class="header bg-(--header-color) h-8 flex justify-between">
+        <div class="flex justify-between">
+            <img src="arsha-logo.png" alt="" class="h-7 W-7 m-1">
+            <i class="fa-solid fa-display ml-6 m-2 text-(--icon-color)"></i>
+            <i class="fa-solid fa-tablet-screen-button  m-2 hover:text-(--icon-color) text-(--header-icons-color)"></i>
+            <i class="fa-solid fa-mobile-screen-button m-2 hover:text-(--icon-color) text-(--header-icons-color)"></i>
+        </div>
+        <div class="text-(--icon-color) m-1 font-bold"><i
+                class="fa-solid fa-chevron-left mr-3 text-(--header-icons-color) hover:text-(--icon-color)"></i>Arsha<i
+                class="fa-solid fa-chevron-right ml-3 text-(--header-icons-color) hover:text-(--icon-color)"></i></div>
+        <div>
+            <i
+                class="fa-solid fa-arrow-up-right-from-square m-2  hover:text-(--icon-color) text-(--header-icons-color)"></i>
+            <button class="bg-sky-500/100 hover:bg-sky-500/75 text-(--icon-color) h-8 font-bold"><a href="#"><i
+                        class="fa-solid fa-arrow-down text-(--icon-color) m-2"></i>DOWNLOAD</a></button>
+        </div>
+    </header>
+    <!-- navbar section -->
+    <nav class="navbar">
+        <div class="bg-(--nav-bgcolor) flex justify-between items-center h-15 ">
+            <div class="text-(--text-color) ml-25 font-[600] text-[35px]"><a href="">ARSHA</a></i></div>
+            <div class=" navdiv relative inline-block">
+                <ul class="inline-flex text-(--text-color) font-[600] text-[15px] mr-25 m-1 ">
+                    <li class="mr-8 hover:text-(--hover-colors) active:text-(--hover-colors)"><a href="#home">Home</a>
+                    </li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#about">About</a></li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#services">services</a></li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#portfolio">Portfolio</a></li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#team">Team</a></li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#">Pricing</a></li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#">Blog</a></li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#">Dropdown <i
+                                class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu hidden">
+                            <ul
+                                class="absolute bg-[white] text-[black] m-2 font-[600] text-[15px] rounded-md w-45 border-1 border-(--dropdown-border) z-100">
+                                <li class="p-3 hover:text-(--hover-colors)"><a href="">Dropdown 1</a></li>
+                                <li class="p-3 hover:text-(--hover-colors)"><a href="">Deep Dropdown <i
+                                            class="fa-solid fa-chevron-down float-right"></i></a>
+                                    <div
+                                        class=" deep-menu absolute bg-[white] text-[black] top-15 left-44 w-45 rounded-md border-1 border-(--dropdown-border) hidden">
+                                        <ul>
+                                            <li class="p-3 hover:text-(--hover-colors)"><a href="">Deep Dropdown 1</a>
+                                            </li>
+                                            <li class="p-3 hover:text-(--hover-colors)"><a href="">Deep Dropdown 2</a>
+                                            </li>
+                                            <li class="p-3 hover:text-(--hover-colors)"><a href="">Deep Dropdown 3</a>
+                                            </li>
+                                            <li class="p-3 hover:text-(--hover-colors)"><a href="">Deep Dropdown 4</a>
+                                            </li>
+                                            <li class="p-3 hover:text-(--hover-colors)"><a href="">Deep Dropdown 5</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="p-3 hover:text-(--hover-colors)"><a href="">Dropdown 2</a></li>
+                                <li class="p-3 hover:text-(--hover-colors)"><a href="">Dropdown 3</a></li>
+                                <li class="p-3 hover:text-(--hover-colors)"><a href="">Dropdown 4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mr-8 hover:text-(--hover-colors)"><a href="#contact">Contact</a></li>
+                    <button class="bg-sky-500/100 hover:bg-sky-500/75 rounded-full h-8 w-30">Get Started</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home section -->
+    <section id="home" class="bg-(--home-bgcolor) w-auto h-screen flex justify-between align-center ">
+        <div class="capitalize  mt-45 ml-25">
+            <h1 class="text-(--text-color) font-[900] text-[50px]">
+                better solution for <br> your business
+            </h1>
+            <p class="text-(--hmtext2-color) font-[400] text-[25px]">
+                weareteamoftalenteddesigners making <br>websites with bootstrap
+            </p>
+            <button
+                class="text-(--text-color) bg-sky-500/100 hover:bg-sky-500/75 rounded-full h-10 w-35 font-[500] text-[20px] mt-10">Get
+                Started</button>
+            <div class=" relative left-44 -top-10"><i
+                    class="fa-regular fa-circle-play text-(--text-color) font-[200] text-[30px]"></i><span
+                    class="text-(--text-color) font-[500] text-[20px] ml-2 absolute -top-0.2">Watch Video</span></div>
+        </div>
+        <div class=" container items-center h-100 w-140 mt-10 mr-20"><img src="home-img.png" alt="" class=" h-120 w-130 mt-20">
+        </div>
+    </section>
+    <!-- home buttom section -->
+    <section>
+        <div class="clients h-20 bg-(--div-color) flex justify-between align-center">
+            <img src="clients-1.webp" alt="" class="h-8">
+            <img src="clients-2.webp" alt="" class="h-8">
+            <img src="clients-3.webp" alt="" class="h-8">
+            <img src="clients-4.webp" alt="" class="h-8">
+            <img src="clients-5.webp" alt="" class="h-8">
+            <img src="clients-6.webp" alt="" class="h-8">
+            <img src="clients-7.webp" alt="" class="h-8">
+            <img src="clients-8.webp" alt="" class="h-8">
+        </div>
+        <!-- About section -->
+        <section id="about" class="h-90 w-auto bg-(--bgcolor)">
+            <div>
+                <div>
+                    <h1 class="text-center mt-15 font-[700] text-[35px] uppercase text-(--about-heading)">About Us</h1>
+                    <div class="w-40 h-1 bg-(--button-bgcolor) mt-5 mr-auto ml-155 rounded-[2vw] "></div>
+                </div>
+                <div class=" about-div1 flex justify-between align-center">
+                    <div class="ml-30 mt-10 h-55 w-120">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                            tempor incididunt ut labore et dolore magna aliqua <br></p>
+                        <p class="leading-[2.5]">
+                            <i class="fa-regular fa-circle-check text-(--about-color) "></i>Ullamco laboris nisi ut
+                            aliquip ex ea commodo <br>
+                            <i class="fa-regular fa-circle-check text-(--about-color)"></i> Duis aute irure dolor in
+                            reprehenderit in voluptate <br>
+                            <i class="fa-regular fa-circle-check text-(--about-color)"></i> Ullamco laboris nisi ut
+                            aliquip ex ea commodo <br>
+                        </p>
+                    </div>
+                    <div class="mr-30 mt-10 h-40 w-140">
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                            qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <button
+                            class="text-(--about-color) bg-[white] hover:bg-(--about-color) hover:text-[white] capitalize border-2 border-(--about-color) p-2 pl-8 pr-8 mt-5 font-[400] text-[15px] rounded-md">
+                            <a href="#home">read more</a><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about first section -->
+        <section class="bg-(--bgcolor)" id="about-first">
+            <div class="flex justify-between align-center mt-10 ">
+                <div class="ml-20 basis-[140vw]">
+                    <div>
+                        <h1 class=" text-(--about-heading)  font-[400] text-[35px]">
+                            Eum ipsam laborum deleniti <span class="font-[700] text-[35px]">velit pariatur <br>
+                                architecto aut nihil</span></h1>
+                        <p class="text-[20px] text-(--about-text)">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure
+                            dolor in reprehenderit
+
+                        </p>
+                    </div>
+                    <div class="font-[400] text-[18px] m-5 p-5 bg-(--div-color)">
+                        <h1 class="font-[500] text-(--about-color)">01 Non consectetur a erat nam at lectus urna duis?
+                        </h1>
+                        <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non
+                            curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non
+                        </p>
+                    </div>
+                    <div class="font-[400] text-[18px] m-5 p-5 bg-(--div-color)">
+                        <h1 class="font-[500] text-(--about-color)">02 Feugiat scelerisque varius morbi enim nunc
+                            faucibus a pellentesque?</h1>
+                        <p> Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit
+                            laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.
+                            Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa
+                            tincidunt dui.
+                        </p>
+                    </div>
+                    <div class="font-[400] text-[18px] m-5 p-5 bg-(--div-color)">
+
+                        <h1 class="font-[500] text-(--about-color)">03 Dolor sit amet consectetur adipiscing elit
+                            pellentesque?</h1>
+                        <p> Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar
+                            elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
+                            pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at
+                            elementum eu facilisis sed odio morbi qui
+
+                        </p>
+                    </div>
+                </div>
+                <div class="basis-40vw mt-40 m-20"><img src="about1.png" alt="Network error"></div>
+            </div>
+        </section>
+        <!-- second section -->
+        <section id="about-second">
+            <div class="flex justify-between align-center">
+                <div class="m-10 "><img src="about2.webp" alt="" class="h-120"></div>
+                <div class="m-20">
+                    <h1 class="font-[700] text-[35px] text-(--about-heading)">Voluptatem dignissimos provident quasi
+                        corporis voluptas</h1>
+                    <p class="italic text-(--about-text)">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <div class="abc mt-10">
+                        <label for=""><span class="">HTML</span></label> <span class="float-right">100%</span><br>
+                        <progress id="progress" max="100" value="100" class="prg w-160 h-2"></progress><br>
+                        <label for=""><span>CSS</span></label> <span class="float-right">90%</span><br>
+                        <progress id="progress" max="100" value="90" class="w-160 h-2"></progress>
+                        <label for=""><span>JAVASCRIPT</span></label> <span class="float-right">75%</span><br>
+                        <progress id="progress" max="100" value="75" class="w-160 h-2"></progress>
+                        <label for=""><span>PHOTOSHOP</span></label> <span class="float-right">55%</span><br>
+                        <progress id="progress" max="100" value="55" class="w-160 h-2"></progress>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- services section -->
+        <section id="services" class="bg-(--bgcolor)">
+            <div>
+                <div class="text-center">
+                    <h1 class="font-[700] text-[35px] uppercase text-(--about-heading)">services</h1>
+                    <div class="w-40 h-1 bg-(--button-bgcolor) mt-2 mb-4 mr-auto ml-155 rounded-[2vw] "></div>
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                </div>
+                <div class="grid grid-flow-col mt-20 mb-20 ml-30 mr-30 shadow-md ">
+                    <div class="services-div1 h-60 w-60 bg-(--div-color)"><a href="">
+                            <h1 class="text-center mt-10 font-[700] text-[20px] text-(--about-heading)">Lorem Ipsum</h1>
+                            <p class="m-5">volptatum deleniti atque corrupti quos dolores et quas molestias Excepteuri
+                            </p>
+                        </a>
+                    </div>
+                    <div class="services-div1 h-60 w-60 bg-(--div-color) shadow-md "><a href="">
+                            <h1 class="text-center mt-10 font-[700] text-[20px] text-(--about-heading)">Sed ut perspici
+                            </h1>
+                            <p class="m-5">Duis aute irure dolor in reprehenderit in voluptas velit esse cillum dolore
+                            </p>
+                        </a>
+                    </div>
+                    <div class="services-div1 h-60 w-60 bg-(--div-color) shadow-md "><a href="">
+                            <h1 class="text-center mt-10 font-[700] text-[20px] text-(--about-heading)">Magni Dolores
+                            </h1>
+                            <p class="m-5">Excepteursint occaecat cupidatat Non proident, sunt in culpa qui officia </p>
+                    </div>
+                    <div class="services-div1 h-60 w-60 bg-(--div-color) shadow-md "><a href="">
+                            <h1 class="text-center mt-10 font-[700] text-[20px] text-(--about-heading)">Nemo Enim</h1>
+                            <p class="m-5">At vero eos et accusamus et iusto odio dignissim ducimus qui blanditiis</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- work process -->
+        <section class="work bg-[url(bg-8.webp)] bg-no-repeat bg-auto bg-center bg-(--nav-bgcolor) opacity-80 ">
+            <section class="bg-(--bgcolor)">
+                <div>
+                    <div class="text-center">
+                        <h1 class="font-[700] text-[35px] uppercase text-(--about-heading) mb-3">work process</h1>
+                        <div class="w-40 h-1 bg-(--button-bgcolor) mt-2 mb-3 mr-auto ml-155 rounded-[2vw] "></div>
+                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                    </div>
+                    <div class="  grid grid-flow-col mt-20 mb-20 ml-30 mr-30">
+                        <div class=" div1 h-140 w-80 bg-(--div-color) rounded-md shadow-xl">
+                            <img src="steps-1.webp" alt="">
+                            <div class="h-15 w-15 bg-(--about-color) text-center text-[white] rounded-full font-[500] text-[30px]"
+                                class="work1">01</div>
+                            <h1 class="font-[700] text-[25px] text-(--about-heading) ml-5 mb-5">Research & Analysis</h1>
+                            <p class="ml-5">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                sed quia consequuntur magni dolores eos qui ratione.
+                            <p class="leading-[2.5] ml-5"> <i
+                                    class="fa-regular fa-circle-check text-(--about-color) "></i>Market Research <br>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i>Data Analysis<br>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i>User Feedback
+                            </p>
+                            </p>
+                        </div>
+                        <div class="div1 h-140 w-80 bg-(--div-color) rounded-md shadow-xl">
+                            <img src="steps-2.webp" alt="">
+                            <div class="h-15 w-15 bg-(--about-color) text-center text-[white] rounded-full font-[500] text-[30px]"
+                                class="work1">02</div>
+
+                            <h1 class="font-[700] text-[25px] text-(--about-heading) ml-5 mb-5">Design & Planning</h1>
+                            <p class="ml-5">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                                suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.<br>
+                            <p class="leading-[2.5] ml-5"><i
+                                    class="fa-regular fa-circle-check text-(--about-color) "></i>Wireframing<br>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i> UI/UX Design<br>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i>Prototyping
+                            </p>
+                            </p>
+                        </div>
+                        <div class="div1 h-140 w-80 bg-(--div-color) rounded-md shadow-xl">
+                            <img src="steps-3.webp" alt="">
+                            <div class="h-15 w-15 bg-(--about-color) text-center text-[white] rounded-full font-[500] text-[30px]"
+                                class="work1">03</div>
+
+                            <h1 class="font-[700] text-[25px] text-(--about-heading) ml-5 mb-5">Development & Launch
+                            </h1>
+                            <p class="ml-5">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
+                                tempore, cum soluta nobis est eligendi optio cumque nihil. <br>
+                            <p class="leading-[2.5] ml-5 "></i>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i> Development<br>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i>Testing<br>
+                                <i class="fa-regular fa-circle-check text-(--about-color) "></i>Deployment
+                            </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- call to active -->
+            <section class=" h-80">
+                <div class="flex justify-between align-center">
+                    <div class="text-(--text-color) mt-30 ml-30 w-230">
+                        <h1 class="font-[700] text-[30px]">Call To Action</h1>
+                        <p class="font-[400] text-[20px]">Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="mr-30 mt-40">
+                        <button
+                            class="text-(--text-color) hover:bg-(--about-color) hover:text-[white] capitalize border-2 border-(--text-color) p-2 pl-8 pr-8 mt-5 font-[400] text-[15px] rounded-full">
+                            <a href="#home">call to active</a></button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- portfolio section -->
+            <section id="portfolio" class="bg-(--bgcolor)">
+                <div>
+                    <div class="text-center mt-10">
+                        <h1 class="font-[700] text-[35px] uppercase text-(--about-heading)">Portfolio</h1>
+                        <div class="w-40 h-1 bg-(--button-bgcolor) mt-2 mb-3 mr-auto ml-155 rounded-[2vw] "></div>
+                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                    </div>
+                    <div class="flex justify-evenly align-center mt-5 ">
+                        <div
+                            class="h-8 w-12  ml-60 rounded-xl text-center font-[500] text-[15px]  hover:bg-(--button-bgcolor) hover:text-(--text-color) ">
+                            All</div>
+                        <div
+                            class="h-8 w-12 rounded-xl text-center font-[500] text-[15px]  hover:bg-(--button-bgcolor) hover:text-(--text-color)">
+                            App</div>
+                        <div
+                            class="h-8 w-12 rounded-xl text-center font-[500] text-[15px]  hover:bg-(--button-bgcolor) hover:text-(--text-color)">
+                            Cards</div>
+                        <div
+                            class="h-8ounded-xl text-center font-[500] text-[15px]  hover:bg-(--button-bgcolor) hover:text-(--text-color)">
+                            Web</div>
+                    </div>
+                    <div class="flex justify-evenly align-center ml-20 mr-20 mt-5">
+                        <div class="grid relative">
+                           <div> <img src="portfolio-portrait-1.webp" alt="" class="h-120 w-90">
+                        </div>
+                            <img src="portfolio-portrait-3.webp" alt="" class="h-120 w-90">
+                        </div>
+                        <div class="grid">
+                            <img src="portfolio-1.webp" alt="" class="h-60 w-90">
+                            <img src="portfolio-4.webp" alt="" class="h-60 w-90">
+                            <img src="portfolio-7.webp" alt="" class="h-60 w-90">
+                            <img src="portfolio-9.webp" alt="" class="h-60 w-90">
+                        </div>
+                        <div class="grid">
+                            <img src="portfolio-3.webp" alt="" class="h-65 w-90">
+                            <img src="portfolio-portrait-2.webp" alt="" class="h-120 w-90">
+                            <img src="portfolio-8.webp" alt="" class="h-65 w-90">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- team section -->
+        <section id="team" class="h-150 mt-20">
+            <h1 class="font-[700] text-[35px] uppercase text-(--about-heading) text-center">team</h1>
+            <div class="w-40 h-1 bg-(--button-bgcolor) mt-2 mb-3 mr-auto ml-155 rounded-[2vw] "></div>
+            <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <div class="grid grid-cols-2 gap-0 align-center ml-40 ">
+                              <!-- first div -->
+                <div class="team-div h-55 w-140 m-3 flex justify-between align-center bg-(--div-color) shadow-xl">
+                    <div><img src="person-m-7.webp" alt="" class="h-40 rounded-full m-5"></div>
+                    <div class="ml-10">
+                        <h1 class=" mt-5 font-[700] text-[20px] text-(--about-heading)">Walter White</h1>
+                        <h5 class="font-[500] text-[20px]">Chief Executive Office</h5>
+                        <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                        <i class="fa-brands fa-x-twitter mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-facebook ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-instagram ml-5 mt-5font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-linkedin ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    </div>
+                </div>
+                            <!-- second div -->
+                <div class="team-div h-55 w-140 m-3 flex justify-between align-center bg-(--div-color) shadow-xl">     
+                    <div><img src="person-f-8.webp" alt="" class="h-40 rounded-full m-5"></div>
+                <div class="ml-10">
+                    <h1 class=" mt-5 font-[700] text-[20px] text-(--about-heading)">Sarah Jhonson</h1>
+                    <h5 class="font-[500] text-[20px]">Product Manager</h5>
+                    <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                    <i class="fa-brands fa-x-twitter mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    <i class="fa-brands fa-facebook ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    <i class="fa-brands fa-instagram ml-5 mt-5font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    <i class="fa-brands fa-linkedin ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                </div>
+                </div>
+                                   <!-- third div -->
+                <div class="team-div h-55 w-140 m-3 flex justify-between align-center bg-(--div-color) shadow-xl">
+                    <div><img src="person-m-6.webp" alt="" class="h-40 rounded-full m-5"></div>
+                    <div class="ml-10">
+                        <h1 class=" mt-5 font-[700] text-[20px] text-(--about-heading)">William Anderson</h1>
+                        <h5 class="font-[500] text-[20px]">CTO</h5>
+                        <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                        <i class="fa-brands fa-x-twitter mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-facebook ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-instagram ml-5 mt-5font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-linkedin ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    </div>
+                </div>
+                                      <!-- forth div -->
+                <div class="team-div h-55 w-140 m-3 flex justify-between align-center bg-(--div-color) shadow-xl">
+                    <div><img src="person-f-4.webp" alt="" class="h-40 rounded-full m-5"></div>
+                    <div class="ml-10">
+                        <h1 class=" mt-5 font-[700] text-[20px] text-(--about-heading)">Amanda Jepson</h1>
+                        <h5 class="font-[500] text-[20px]">Accountant</h5>
+                        <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                        <i class="fa-brands fa-x-twitter mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-facebook ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-instagram ml-5 mt-5font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                        <i class="fa-brands fa-linkedin ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <!-- Contact services -->
+        <section id="contact">
+            <!-- first portion -->
+            <div>
+                <div class="text-center mt-20">
+                    <h1 class="font-[700] text-[35px] uppercase text-(--about-heading)">Contact</h1>
+                    <div class="w-40 h-1 bg-(--button-bgcolor) mt-2 mb-3 mr-auto ml-155 rounded-[2vw] "></div>
+                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                </div>
+                <div class="flex justify-evenly m-20">
+                    <div class="h-140 w-110 bg-(--div-color) border-t-4 border-b-4 border-(--button-bgcolor) shadow-xl">
+                        <div class="flex justify-between align-center m-10">
+                            <div
+                                class="mt-5 h-10 w-10 text-center rounded-full bg-(--bgcolor) hover:bg-(--button-bgcolor) ">
+                                <i
+                                    class="fa-solid fa-location-dot font-[900] text-[30px] text-(--button-bgcolor) hover:text-(--text-color)"></i>
+                            </div>
+                            <div>
+                                <h1 class=" mt-5 font-[700] text-[20px] text-(--about-heading)"></i>Address</h1>
+                                <p>
+                                    A108 Adam Street, New York, NY 535022</p>
+                            </div>
+                        </div>
+                        <div class="flex align-center ">
+                            <div
+                                class="ml-10 h-10 w-10 text-center rounded-full bg-(--bgcolor) hover:bg-(--button-bgcolor) ">
+                                <i
+                                    class="fa-solid fa-phone font-[900] text-[30px] text-(--button-bgcolor) hover:text-(--text-color)"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h1 class=" font-[700] text-[20px] text-(--about-heading)">Call Us</h1>
+                                <p>+1 5589 55488 55</p>
+                            </div>
+                        </div>
+                        <div class="flex  align-center mt-10">
+                            <div
+                                class="ml-10 h-10 w-10 text-center rounded-full bg-(--bgcolor) hover:bg-(--button-bgcolor) ">
+                                <i
+                                    class="fa-regular fa-envelope font-[900] text-[30px] text-(--button-bgcolor) hover:text-(--text-color)"></i>
+                            </div>
+                            <div class="ml-5">
+                                <h1 class="font-[700] text-[20px] text-(--about-heading)">Email Us</h1>
+                                <p>info@example.com</p>
+                            </div>
+                        </div>
+                        <div>
+                            <iframe class="h-50 w-100 m-5 shadow-xl"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d193559.13256472183!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown.%20Conference%20Center!5e0!3m2!1sen!2sus!4v1744911627903!5m2!1sen!2sus"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        </div>
+                    </div>
+                    <!-- second portion -->
+                    <div class="h-140 w-150 bg-(--div-color) border-t-4 border-b-4 border-(--button-bgcolor) shadow-xl">
+                        <div class="m-8">
+                            <label for="" class="capitalize">your name</label>
+                            <label for="" class="ml-52 capitalize">your e-mail</label><br>
+                            <input type="text" class="mt-2 h-10 w-60 ">
+                            <input type="email" class="mt-2 h-10 w-60 float-right">
+                        </div>
+                        <label for="" class="capitalize ml-8">subject</label><br>
+                        <input type="text" class="mt-2 m-8  h-10 w-130">
+                        <label for="" class="capitalize ml-8">message</label><br>
+                        <input type="text" class="mt-2 mb-3 m-8 h-50 w-130">
+                        <div>
+                            <button
+                                class="bg-sky-500/100 hover:bg-sky-500/75 text-(--icon-color) h-12 w-35 font-bold rounded-full ml-50"><a
+                                    href="#">Send Message</a></button>
+                        </div>
+                    </div>
+        </section>
+        <!-- Join Our Newsletter section -->
+        <section class="bg-(--bgcolor) h-60">
+            <div>
+                <div class="text-center">
+                    <h1 class="font-[700] text-[25px] capitalize text-(--about-heading) ">Join Our Newsletter</h1>
+                    <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+                </div>
+                <div class="text-center m-10 inline-block relative">
+                    <input class="bg-(--bgcolor) h-12 w-100 rounded-full ml-100 shadow-xl" type="email"> <button
+                        class="bg-sky-500/100 hover:bg-sky-500/75 text-(--icon-color) capitalize h-12 w-35 font-bold rounded-full mt-10 ml-50 absolute -top-10 left-140 z-99"><a
+                            href="#">subscribe</a></button>
+                </div>
+            </div>
+        </section>
+        <!-- before footer section -->
+        <section class="h-80">
+            <div class="flex justify-center align-center">
+                <div class="h-60 w-70 m-10">
+                    <h2 class="text-(--about-heading) font-[600] text-[35px] m-5"><a href="">ARSHA</a></i></h2>
+                    <p class="ml-5  mb-3">A108 Adam Street <br>
+                        New York, NY 535022</p>
+                    <p class="ml-5"><strong>Phone:</strong> +1 5589 55488 55</p>
+                    <p class="ml-5"><strong>Email:</strong> info@example.com</p>
+                </div>
+                <div class="h-60 w-50 m-10">
+                    <h4 class="text-(--about-heading) font-[600] text-[20px] m-5">Useful Links</i></h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right ml-5 mb-3 mr-2 text-(--button-bgcolor)"></i>Home</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right ml-5 mb-3 mr-2 text-(--button-bgcolor)"></i>About Us</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right ml-5 mb-3 mr-2 text-(--button-bgcolor)"></i>Services</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right ml-5 mr-2 text-(--button-bgcolor)"></i>Term of services</a></li>
+                    </ul>
+                </div>
+                <div class="h-60 w-50 m-10">
+                    <h4 class="text-(--about-heading) font-[600] text-[20px] m-5">Our Services</i></h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right ml-5 mb-3 mr-2 text-(--button-bgcolor)"></i>Web Design</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right ml-5 mb-3 mr-2 text-(--button-bgcolor) "></i>Web Development</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right ml-5 mb-3 mr-2 text-(--button-bgcolor) "></i>Product Management</a></li>
+                        <li><a href=""><i class="fa-solid fa-chevron-right ml-5 mr-2 text-(--button-bgcolor) "></i>Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="h-60 w-90 m-10">
+                    <h4 class="text-(--about-heading) font-[600] text-[20px] m-5">Follow Us</i></h4>
+                    <p class="ml-5">Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <i class="fa-brands fa-x-twitter ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    <i class="fa-brands fa-facebook ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    <i class="fa-brands fa-instagram ml-5 mt-5font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                    <i class="fa-brands fa-linkedin ml-5 mt-5 font-[600] text-[25px] hover:text-(--button-bgcolor)"></i>
+                </div>
+            </div>
+        </section><hr>
+        <!-- footer  -->
+        <footer class="h-30">
+            <p class="text-center m-10"><i class="fa-regular fa-copyright mr-3"></i>Copyright <strong>Arsha</strong> All Rights Reserved <br> Designed by <a href="" class="text-(--button-bgcolor)">BootstrapMade</a></p>
+        </footer>
+</body>
+
+</html>
