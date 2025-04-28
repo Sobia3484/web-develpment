@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let a = 1;
+        let prms = new Promise((resolve,reject) =>{
+            if (a > 5) {
+                resolve("condition is true")
+            }
+            else {
+                reject("condition is false")
+            }
+        });
+        prms.then((message) => {
+            console.log("message");
+        })
+            .catch((err) => {
+                console.log("error");
+            })
+    
+
+    </script>
+</body>
+
+</html>
