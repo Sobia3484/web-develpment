@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #444;
+    height: 100vh;
+    gap: 20px;
+}
+
+.frame {
+    width: 700px;
+    /* height: 500px; */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.arrow{
+    width: 80px;
+    position: relative;
+}
+.left{
+    position: absolute;
+    left: 260px;
+    top: 100;
+    /* display: none; */
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0.8;
+}
+/* .left:hover{
+    display: inline-block;
+    background-color: blueviolet;
+}  */
+ .right{
+    transform: rotate(180deg);
+ }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img src="arrow-left.png" alt="" class="arrow left">
+    <div class="frame">
+        <div class="slider">
+            <img src="portfolio-1.webp" alt="" class="image">
+            <img src="portfolio-3.webp" alt="" class="image">
+            <img src="portfolio-4.webp" alt="" class="image">
+        </div>
+    </div>
+    <img src="arrow-left.png" alt="" class="arrow right">
+</div>
+
+<script>
+    const slider = document.querySelector('.slider');
+const images = document.querySelectorAll('.image');
+const leftArrow = document.querySelector('.left');
+const rightArrow = document.querySelector('.right');
+
+let slideNumber = 0;
+
+rightArrow.addEventListener('click', () => {
+    if (slideNumber < images.length - 1) {
+        slideNumber++;
+    } else {
+        slideNumber = 0; // loop back to first image
+    }
+    updateSlide();
+});
+leftArrow.addEventListener('click', () => {
+    if (slideNumber > 0) {
+        slideNumber--;
+    } else {
+        slideNumber = images.length - 1; // go to last image
+    }
+    updateSlide();
+});
+function updateSlide() {
+    slider.style.transform = `translateX(-${slideNumber * 700}px)`;
+}
+                //auto moving slide
+let slideInterval;
+const startSlideShow = () => {
+    slideInterval = setInterval(() => {
+        if (slideNumber < images.length - 1) {
+        slideNumber++;
+    } else {
+        slideNumber = 0; // loop back to first image
+    }
+    updateSlide();
+    }, 5000);
+}      
+startSlideShow();           
+</script>
+</body>
+</html>

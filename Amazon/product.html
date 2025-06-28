@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------icons-link--------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Product</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    /* body {
+        background-color: rgb(204, 201, 201);
+    } */
+
+    .nav {
+        background-color: #0F1111;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 15px;
+    }
+
+    .delivery {
+        display: flex;
+        align-items: end;
+    }
+
+    .delivery i {
+        padding: 0px 5px 5px 0px;
+        font-size: 20px;
+    }
+
+    .delivery p {
+        color: rgb(156, 152, 152);
+        font-size: 12px;
+    }
+
+    .search-bar {
+        display: flex;
+    }
+
+    .search-category {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: rgb(236, 234, 234);
+        color: black;
+        border: 1px solid rgb(209, 205, 205);
+    }
+
+    .search-category i {
+        margin-left: 5px;
+    }
+
+    input[type="search"] {
+        width: 600px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+
+    .search-bar button {
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        background-color: rgb(247, 111, 62);
+    }
+
+    .language {
+        display: flex;
+        align-items: end;
+    }
+
+    .language img {
+        height: 18px;
+        width: 25px;
+        margin-right: 5px;
+    }
+
+    .language h4 {
+        margin-right: 5px;
+        font-size: 13px;
+        font-weight: 800;
+    }
+
+    .sign-in {
+        display: grid;
+    }
+
+    .sign-in p {
+        font-size: 12px;
+    }
+
+    .orders p {
+        font-size: 12px;
+    }
+
+    .cart a {
+        display: flex;
+        margin-right: 15px;
+    }
+
+    .cart i {
+        font-size: 25px;
+        margin-right: 5px;
+    }
+
+    .cart h4 {
+        align-items: end;
+    }
+
+    /* ---------nav bottom------- */
+    .nav-bottom {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        background-color: rgb(65, 64, 64);
+        color: white;
+        font-weight: 500;
+    }
+
+    .nav-bottom-menu {
+        display: flex;
+        gap: 5px;
+        margin-left: 15px;
+    }
+
+    /* --------product------ */
+    .products-display {
+        min-height: 100%;
+        /* background-color: cadetblue; */
+        padding: 10px 20px;
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .product-image {
+        display: flex;
+        gap: 20px;
+    }
+
+    .product-icons {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-icons img {
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .product-detail {
+        margin: 0px 30px;
+    }
+
+    .product-title {
+        font-size: 25px;
+    }
+
+    .brand-store {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #007185;
+    }
+
+    .product-rating {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-rating div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product-rating p {
+        color: #007185;
+    }
+
+    .product-rating p span {
+        color: #fff;
+        background-color: #c73500;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-size: 14ppx;
+    }
+
+    .product-rating h5 {
+        font-weight: 400;
+    }
+
+    .product-price {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .product-price div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .product-price div p {
+        font-size: 26px;
+        color: #c73500;
+    }
+
+    .product-price div h1 {
+        font-size: 14px;
+        color: #565656;
+        font-weight: 500;
+    }
+
+    .product-price div h1 span {
+        font-size: 26px;
+        color: #565656;
+        font-weight: 500;
+    }
+
+    .product-price h5 span {
+        text-decoration: line-through;
+    }
+
+    .product-price p span {
+        color: #007185;
+    }
+
+    .prroduct-color-selection {
+        margin: 15px 0;
+    }
+
+    .product-color-options {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        border: 1px solid gray;
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .product-info {
+        display: grid;
+        grid-template-columns: auto auto;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+    .product-description{
+        font-size: 20px;
+        margin: 15px 0px;
+    }
+    .product-description ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 30px;   
+    }
+    .product-purchase{
+        width: 100%;
+        max-width: 280px;
+        /* height: 100%; */
+        border: 1px solid #c1c1c1;
+        padding: 20px;
+        /* margin: 10px; */
+        border-radius: 10px;
+    }
+    .product-purchase .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 40px; */
+    }
+    .product-purchase .price{
+        font-size: 16px;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+    .product-purchase .price span{
+         font-size: 26px;
+         padding: 2px;
+    }
+    .product-purchase .gap{
+        margin: 15px 0px;
+    }
+    .product-purchase p span{
+        color: #007185;
+    }
+    .delivery-location{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .delivery-location .fa-solid{
+        color: #007185;
+    }
+    .product-stock{
+        margin: 15px 0px;
+        color: green;
+    }
+    .product-quantity{
+        padding: 8px 5px;
+        width: 100%;
+        outline: none;
+        border-color: #c1c1c1;
+        background-color: #efefef;
+        border-radius: 5px;
+        /* color: #007185; */
+    }
+    .product-btn{
+        margin: 15px 0px;
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+        gap: 10px;
+    }
+    .product-btn .btn{
+        border: none;
+        background-color: #ffd814;
+        padding: 8px 5px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .product-btn .buy-now{
+        background-color: #ffa41c;
+    }
+    .product-seller-info{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 5px;
+        color: #565656;
+        margin-bottom: 10px;
+    }
+    .product-seller-info span{
+        color: #007185;
+    }
+    .product-add-list{
+        margin: 10px;
+        padding: 8px 5px;
+        width: 100%;
+        text-align: start;
+        background-color: white;
+        border: 1px solid #000;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .product-slider-main{
+        margin-top: 15px;
+    }
+    .product-slider{
+        /* background-color: #007185; */
+        display: flex;
+        /* gap: 10px; */
+        overflow-x: scroll;
+    }
+    .product-slider-div{
+        display: flex;
+        flex-direction: column;
+        /* align-content: center; */
+        background-color: rgb(235, 232, 232);
+        width: 250px;
+        height: 300px;
+        padding: 8px;
+    }
+    .product-slider-img img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+    .product-offer{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    .product-offer p{
+       background-color: #c73500;
+       padding: 5px 5px;
+    }
+    .product-offer span{
+        color: #c73500;
+        font-weight: 900;
+    }
+    .footer{
+        margin-top: 20px;
+        margin-bottom: 15px;
+        background-color: #565656;
+        padding: 10px 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer a{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .footer p{
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+    }
+</style>
+
+<body>
+    <!------------nav-------------->
+    <nav class="nav">
+        <a href="./index.html" class="logo">
+            <h1>amazon</h1>
+        </a>
+        <div class="delivery">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+                <p>Deliver to</p>
+                <h4>Pakistan</h4>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-category">
+                <p>All</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <input type="search" placeholder="Search any item....  ">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="language">
+            <img src="flag.jpg" alt="">
+            <h4>EN</h4>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <div class="sign-in">
+            <p>Hello, sign in</p>
+            <h4>Accounts & Lists
+                <i class="fa-solid fa-caret-down"></i>
+            </h4>
+        </div>
+
+        <div class="orders">
+            <p>Return</p>
+            <h4>& Orders</h4>
+        </div>
+
+        <div class="cart">
+            <a href="">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h4>Cart</h4>
+            </a>
+        </div>
+    </nav>
+    <!-- -------nav bottom-------  -->
+    <section class="nav-bottom">
+        <div class="nav-bottom-menu">
+            <i class="fa-solid fa-bars"></i>
+            <p>All</p>
+        </div>
+        <p>Today's deal</p>
+        <p>Registry</p>
+        <p>Prime video</p>
+        <p>Gift cards</p>
+        <p>Customer service</p>
+        <p>Sell</p>
+    </section>
+    <!-- ------products------- -->
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+    <div class="products-display">
+        <div class="product-image">
+            <div class="product-icons">
+                <img src="product.webp" alt="Network error" width="80px">
+                <img src="product.webp" alt="Network error" width="80px">
+                <img src="product.webp" alt="Network error" width="80px">
+                <img src="product.webp" alt="Network error" width="80px">
+                <img src="product.webp" alt="Network error" width="80px">
+            </div>
+            <div class="product-mainimage">
+                <img src="product.webp" alt="Network error" width="300px" height="300px">
+            </div>
+        </div>
+        <div class="product-detail">
+            <p class="product-title">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus sunt nam, mollitia, temporibus
+                asperiores quibusdam illo cum perspiciatis facilis atque explicabo quisquam eum magnam, incidunt
+                voluptates. Error hic atque repellendus!
+            </p>
+            <p class="brand-store">
+                visit the BENGOO Store
+            </p>
+            <div class="product-rating">
+                <div>
+                    4.3 <img src="" alt="" height="20px">
+                    <div>
+                        <p>104,185 rating | Search this page</p>
+                    </div>
+                </div>
+                <p><span>#1 Best Seller</span> in PC game Headsets</p>
+                <h5>10K+ bought in the last month</h5>
+                <hr>
+            </div>
+            <div class="product-price">
+                <div>
+                    <p>-35%</p>
+                    <h1>$<span>25</span>.99</h1>
+                </div>
+                <h5>List price: <span>$39.99</span></h5>
+                <p>Get <b>Fast, Free Shipping</b> with <span>Amazon Prime</span></p>
+                <p><span>Free Return</span></p>
+                <p><span>Join prime to buy this item at $22.99</span></p>
+                <p>Available at a lower price from <span>other sellers</span> that may not offer free prime Shipping</p>
+            </div>
+            <div class="prroduct-color-selection">
+                <p>Color: <b>Blue</b></p>
+                <div class="product-color-options">
+                    <div class="option">
+                        <img src="product.webp" alt="" width="30px">
+                        <p>Black</p>
+                    </div>
+                    <div class="option">
+                        <img src="product.webp" alt="" width="30px">
+                        <p>Blue</p>
+                    </div>
+                    <div class="option">
+                        <img src="product.webp" alt="" width="30px">
+                        <p>Purpal</p>
+                    </div>
+                    <div class="option">
+                        <img src="product.webp" alt="" width="30px">
+                        <p>Pink</p>
+                    </div>
+                    <div class="option">
+                        <img src="product.webp" alt="" width="30px">
+                        <p>Brown</p>
+                    </div>
+                    <div class="option">
+                        <img src="product.webp" alt="" width="30px">
+                        <p>Red</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <p><b>Brand</b></p>
+                <p>BENGO</p>
+                <p><b>Model Name</b></p>
+                <p>G9000</p>
+                <p><b>Color</b></p>
+                <p>Blue</p>
+                <p><b>Form Factor</b></p>
+                <p>Over Ear</p>
+                <p><b>Connectivity Technoloy</b></p>
+                <p>Wired</p>
+            </div>
+            <hr>
+            <div class="product-description">
+                <h1>About this item</h1>
+                <ul>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero qui voluptate nulla,
+                        saepe natus! Explicabo dolor perspiciatis deleniti exercitationem praesentium non quis, magni
+                        laborum soluta, ipsa odit quasi a.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero qui voluptate nulla,
+                        saepe natus! Explicabo dolor perspiciatis deleniti exercitationem praesentium non quis, magni
+                        laborum soluta, ipsa odit quasi a.</li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero qui voluptate nulla,
+                        saepe natus! Explicabo dolor perspiciatis deleniti exercitationem praesentium non quis, magni
+                        laborum soluta, ipsa odit quasi a.</li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero qui voluptate nulla,
+                        saepe natus! Explicabo dolor perspiciatis deleniti exercitationem praesentium non quis, magni
+                        laborum soluta, ipsa odit quasi a.</li>
+                     <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero qui voluptate nulla,
+                        saepe natus! Explicabo dolor perspiciatis deleniti exercitationem praesentium non quis, magni
+                        laborum soluta, ipsa odit quasi a.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="product-purchase">
+            <div class="title">
+                <h3>Buy new:</h3>
+                <img src="product.webp" alt="" width="30px">
+            </div>
+            <h1 class="price">$ <span>25</span>.99</h1>
+            <div class="gap">
+                <p>Get <b>Fast, free Shipping</b> with <span>Amazon Prime</span></p>
+                <p><span>FREE Returns</span></p>
+            </div>
+            <div class="gap">
+                <p><span>FREE delivery</span> <b>Saturday</b>,</p>
+                <p><b>January27</b> on orders  Shipping by Amazon over $35</p>
+            </div>
+            <div class="gap">
+                <p>Or fastest delivery <b>Tomorrow</b>, <b>January 23</b>. Order within <span>10 hrs 56 mins</span></p>
+            </div>
+            <div class="delivery-location">
+                <i class="fa-solid fa-location-dot" width="20px"></i>
+                <p><span>Deliver to New York 10014</span></p>
+            </div>
+            <h2 class="product-stock">In stock</h2>
+            <select class="product-quantity">
+                <option value="1">Quantity 1</option>
+                <option value="2">Quantity 2</option>
+                <option value="3">Quantity 3</option>
+            </select>
+            <div class="product-btn">
+            <button class="btn">Add to cart</button>
+            <button class="btn buy-now">Buy Now</button>
+            </div>
+            <div class="product-seller-info">
+                <p>ships from</p><p><span>Amazon</span></p>
+                <p>Sold by</p><p><span>Bengo Inc</span></p>
+                <p>Return</p><p><span>Eligible for return and replacement within 30 days</span></p>
+                <p>Payment</p><p><span>Secure Transaction</span></p>
+            </div>
+            <hr>
+            <button class="product-add-list">Add to List</button>
+        </div>
+    </div>
+    
+                    <!-- -------product slider-------->
+    <div class="product-slider-main">
+        <h1>
+            Deal under $25
+        </h1>
+        <div class="product-slider">
+
+            <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                        <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                        <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                        <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                        <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                        <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                        <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+
+                                    <div class="product-slider-div">
+                <div class="product-slider-img">
+                    <img src="product.webp" alt="">
+                </div>
+                <div class="product-offer">
+                <p>27% off</p><span>Deal</span>
+                </div>
+                <p>$14.49 list Price:$19.95</p>
+                <h4>This product is best for you</h4>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <a href="./index.html">amazon</a>
+        <p>1996-2024, Amazon.com, .or its affiliates</p>
+    </footer>
+</body>
+
+</html>

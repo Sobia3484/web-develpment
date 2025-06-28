@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+body{
+background-color: rgb(204, 201, 201);
+}
+.nav {
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0F1111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.delivery,
+.language,
+.sign-in,
+.orders,
+.cart {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.delivery i,
+.language i,
+.sign-in i,
+.search-category i,
+.cart i {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.delivery p,
+.sign-in p,
+.orders p {
+    font-size: 10px;
+    color: #aaa;
+    margin: 0;
+}
+
+.delivery h4,
+.language h4,
+.sign-in h4,
+.orders h4,
+.cart h4 {
+    font-size: 12px;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+.search-bar {
+    display: flex;
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.search-category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(236, 234, 234);
+    color: black;
+    border: 1px solid rgb(209, 205, 205);
+    font-size: 10px;
+}
+
+input[type="search"] {
+    flex: 1;
+    padding: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 6px;
+    font-size: 14px;
+    background-color: rgb(247, 111, 62);
+    border: none;
+    color: white;
+}
+
+.language img {
+    height: 14px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .nav {
+        flex-wrap: wrap; /* Keep items in row, allow wrap if needed */
+        flex-direction: row; /* Keep horizontal layout */
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    .logo,
+    .delivery,
+    .language,
+    .sign-in,
+    .orders,
+    .cart {
+        margin: 5px;
+        font-size: 10px;
+    }
+
+    .search-bar {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+}
+
+ 
+@media (max-width: 576px) {
+    .nav {
+        padding: 8px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-category,
+    .search-bar button {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    input[type="search"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .delivery h4,
+    .language h4,
+    .sign-in h4,
+    .orders h4,
+    .cart h4 {
+        font-size: 11px;
+    }
+} 
+
+</style>
+<body>
+            <nav class="nav">
+        <a href="" class="logo">
+            <h1>amazon</h1>
+        </a>
+        <div class="delivery">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+                <p>Deliver to</p>
+                <h4>Pakistan</h4>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-category">
+                <p>All</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <input type="search" placeholder="Search any item....  ">
+            <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="language">
+            <img src="flag.jpg" alt="">
+            <h4>EN</h4>
+            <i class="fa-solid fa-caret-down"></i>
+        </div>
+
+        <div class="sign-in">
+            <p>Hello, sign in</p>
+            <h4>Accounts & Lists 
+                <i class="fa-solid fa-caret-down"></i>
+            </h4>  
+        </div>
+
+        <div class="orders">
+            <p>Return</p>
+            <h4>& Orders</h4>
+        </div>
+
+        <div class="cart">
+            <a href="">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h4>Cart</h4>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

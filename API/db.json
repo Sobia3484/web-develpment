@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "Name": "ali",
+      "age": "20",
+      "class": "web"
+    },
+    {
+      "id": "1",
+      "Name": "ahmad",
+      "age": "20",
+      "class": "web"
+    },
+    {
+      "id": "1",
+      "Name": "zain",
+      "age": "20",
+      "class": "web"
+    },
+    {
+      "id": "d30e",
+      "name": "ali",
+      "age": 20,
+      "class": "IT"
+    }
+  ]
+}
