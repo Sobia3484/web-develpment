@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url(uni1.avif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%; 
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        width: 400px;
+        margin: 50px 50px 50px 400px;
+    }
+    .form h1{
+        color: red;
+        margin-left: 40px;
+        margin-bottom: 20px;
+    }
+    .box{
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(230, 225, 225);
+        color: blue;
+        font-size: medium;
+        font-weight: 500;
+    }
+    #submit{
+        padding: 10px;
+        margin: 10px;
+        width: 30%;
+        /* align-items: center; */
+        border-radius: 20px;
+        background-color: rgb(39, 39, 221);
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+    }
+    #submit:hover{
+        color: red;
+    }
+    label{
+        font-size: larger;
+        font-weight: bold;
+        color: purple;
+        }
+        </style>
+        <body>
+        <form action="" class="form">
+        <h1>Login Form</h1>
+        <label for="">First Name:</label>
+        <input class="box" type="text" placeholder="Enter name">
+        <label for="">Last Name:</label>
+        <input class="box" type="text" placeholder="Enter name">
+        <label for="">CNIC:</label>
+        <input class="box" type="cnic" placeholder="00000-0000000-0">
+        <label  for="">E-mail:</label>
+        <input class="box" type="email" placeholder="abc@gmail.com">
+        <label for="">Passwrod:</label>
+        <input class="box" type="password" placeholder="Enter passwrod">
+        <label for="">Contact Number:</label>
+        <input class="box" type="tel" placeholder="+92**********">
+        <label for="">Country:</label>
+        <select name="" class="box">
+            <option value="">Pakistan</option>
+            <option value="">China</option>
+            <option value="">India</option>
+            <option value="">Dubai</option>
+        </select>
+
+        <label for="">Subect:</label>
+        <select name="" class="box">
+            <option value="">Information Technology</option>
+            <option value="">Computer science</option>
+            <option value="">Physis</option>
+            <option value="">English</option>
+        </select>
+        <!-- <label for="">Gender:</label>
+        <label for="">Male:</label>
+        <input type="radio">
+        <label for="">Female:</label>
+        <input type="radio">
+        <input type="checkbox">
+        <label for="">I am nt </label> -->
+
+        <input id="submit" type="submit" value="login">
+        </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

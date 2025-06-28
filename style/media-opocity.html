@@ -1,0 +1,90 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+    :root{
+        --bgcolor: rgb(255, 0, 0);
+        --text-color: yellow;
+    }
+    .navbar{
+        background-color: palevioletred;
+        padding: 10px;
+        margin: 10px;
+    }
+    .navdiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    li{
+        list-style: none;
+        display: inline-block;
+        
+    }
+    li a{
+        margin-right: 10px;
+        color: white;
+    }
+    .container{
+        width: 800px;
+        height: 800px;
+        background-color: gray;
+        display: flex;
+    }
+    .bx1{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(46, 28, 206);
+        visibility: hidden;
+    }
+    .bx2{
+        width: 200px;
+        height: 200px;
+        background-color: rgb(4, 73, 31)
+    }
+    .bx3{
+        width: 200px;
+        height: 200px;
+        background-color: var(--bgcolor);
+        opacity: 0.5;
+        /* display: none; */
+    }
+    .bx4{
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+    }
+    
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navdiv">
+                <a href="#" class="logo">Coursera</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="bx1">1</div>
+        <div class="bx2">2</div>
+        <div class="bx3">3</div>
+        <div class="bx4">4</div>
+    </div>
+</body>
+</html>

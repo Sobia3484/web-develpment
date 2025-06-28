@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    .navdiv {
+        background-color: rgb(229, 229, 238);
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: 900;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+    .logo a {
+        color: lime
+    }
+
+    .logo a span {
+        color: red
+    }
+
+    .navlist ul li {
+        display: inline-block;
+    }
+
+    .navlist ul li a {
+        margin-right: 20px;
+        font-weight: 900;
+       font-size: 25px;
+    }
+    .navicon{
+        font-size: 30px;
+        font-weight: 800;
+        color: blue;
+        display: none;
+    }
+    /* home */
+    #home{
+        width: 100%;
+        height: 80vh;
+        background-color: pink;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .home-text{
+        flex-basis: 45%;
+        font-weight: 900;
+        font-size: 40px;
+        margin-left: 40px;
+        text-transform: capitalize;
+    }
+    .home-img{
+        flex-basis: 30%;
+        height: 200px;
+        width: 200px;
+        /* overflow: hidden; */
+        margin-top: 0px;
+    }
+    @media only screen and (max-width: 900px){
+        /* navbar */
+        .logo{
+            margin-left: 5px;
+        }
+        .navlist{
+           display: none;
+        }
+        .navicon{
+           display: block;
+        }
+        .navlist{
+            display: block;
+            position: fixed;
+            background-color: blueviolet;
+            width: 30%;
+            height: 500px;
+            top: 60px;
+            right: 0px;
+            display: grid;
+        }
+        .navlist ul li{
+            margin: 20px;
+        }
+        .navlist ul li a{
+            color: white;
+            font-size: 40px;  
+        }
+        .change{
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="navdiv">
+            <div class="logo"><a href="">F<span>oo</span>dy </a></div>
+            <div class="navlist">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href=""> <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href=""> <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-chevron-down"></i></a></li>
+                </ul>
+            </div>
+            <i class="navicon fa-solid fa-chevron-down"></i>
+        </div>
+    </nav>
+                       <!-- home section -->
+        <section>
+            <div id="home">
+                <div class="home-text"><h1>natural food is always healthy</h1></div>
+                <div class="home-img"><img src="pic.jpg" alt=""></div>
+            </div>
+        </section>             
+
+    <script>
+            //   navbar responsive icon
+        document.querySelector('.navicon').addEventListener("click",function() {
+            document.querySelector('.navlist').classList.toggle("change")
+        })
+    </script>
+</body>
+
+</html>

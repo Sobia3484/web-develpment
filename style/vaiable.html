@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css variable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    /* :root{
+        -moz-border-right-colors: aliceblue;
+    }
+    .cnta{
+        background-color: var(--);
+    } */
+/* .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: steelblue;
+}
+img{
+    width: 30%;
+}
+img:hover{
+    animation: zoom-in 1s linear infinite;
+}
+@keyframes zoom-in{
+    0%{
+        width: 30%;
+    }
+    100%{
+        width: 40%;
+    }
+} */
+
+
+
+ /* .container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(166, 114, 214);
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-duration: alternate;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+ }
+ .container img{
+    height: 400px;
+    width: 400px;
+    
+ }
+@keyframes animate{
+    from{
+        height: 100px;
+    }
+    to{
+        height: 110px;
+    }
+    0%{
+        background-color: rgb(123, 160, 160);
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    25%{
+        background-color: rgb(73, 73, 184);
+        transform: skew(5deg) translate(-50%, -50%);
+    }
+    50%{
+        background-color: rgb(201, 95, 95);
+        transform: rotate(180deg) translate(-50%, -50%);
+    }
+    75%{
+        background-color: rgb(123, 160, 160);
+        transform: rotate(180deg) translate(-50%, -50%);
+    }
+    100%{
+        background-color: rgb(123, 160, 160);
+        transform: rotate(360deg) translate(-50%, -50%);
+    }
+}
+.container img:hover{
+    touch-action: pan-x;
+} */
+/* .container1{
+    height: 300px;
+    width: 300px;
+    margin-top: 50%;
+}
+@keyframes bounce{
+    from{
+        transform: ;
+    }
+} */
+
+/* @keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    transform: none;
+    animation-timing-function: ease-in-out;
+  }
+}   
+.slow-bounce {
+    animation: slowbounce 3s infinite;
+} */
+
+ .container1{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+ }
+ @keyframes bounce{
+    from{
+        transform: translateY(0);
+        
+    }
+    to{
+        transform: translateY(-10px);
+        
+    }
+ }
+</style>
+<body>
+    <!-- <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-chevron-down"></i>
+    <div class="cnta">
+        <div class="box"><i class="fa-solid fa-arrow-down-to-line"></i></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        
+
+    </div> -->
+
+    <!-- <div class="container">
+        <img src="home-img.png" alt="">
+    </div> -->
+
+    <div class="container1"><img src="pic.jpg" alt=""></div>
+
+
+
+</body>
+</html>
+
+
+
+
+
