@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+                     //while loop
+        // let i = 1;
+        // while (i<=5) {
+        //     console.log("output =",i);
+        //      i++;
+        // }          
+
+
+                    //do while loop
+        // let i = 1;
+        // let n = 5;
+        // do {
+        //     console.log("output =",i);
+        //     i++;
+        // } while (i<=n);
+
+
+        //                   //for loop
+        // for (let i = 0; i <= 5 ; i++) {
+        //     console.log("output", i);  
+        // }         
+        
+        
+                             //for of loop
+        // we can use it only string and array not for object
+        // let str = "javascript";
+        // let size = 0;                       //describe total length of string
+        // for (let i of str) {
+        //     console.log("i =",i); 
+        //     size++;
+        // }
+        // console.log("length =",size);
+
+
+
+                   //for in loop
+
+        // let student = {
+        //     name: "Ali",
+        //     class: "BS",
+        //     semester: 6,
+        //     age: 20
+        // }   
+        // for(let j in student){
+        //     console.log("key =",j ,"----------value =", student[j]);
+        // }   
+
+
+
+
+        //    -------------loop for even and odd Number---------- 
+        // for (let num = 0; num <=50 ; num++) {
+        //    if (num % 2 == 0) {    //for odd number just type != instead of ==
+        //     console.log("Number is",num);
+            
+        //    }
+            
+        // }
+            //  ---------practice question-------- 
+            let gameNumber = 25;
+            let userNumber = prompt("guess the game number...");
+            
+            while (userNumber != gameNumber) {
+               userNumber = prompt("you entre wrong number. Guess again");
+            }
+            console.log("Congratulation!, you entre right number");
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div{
+        height: 200px;
+        width: 200px;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <div class="div"></div>
+    <script>
+    //     setTimeout(anim,2000)
+    //     function anim(){
+    //     let a = document.querySelector('.div')
+    //     a.style.backgroundColor = "red"
+    //     a.style.height = "400px"
+    //     a.style.width = "400px"
+    //     a.style.transition = "all 2s ease-in-out";
+    //     a.style.transform = "translation(200px,200px)"
+    //     a.style.borderRadius ="50%"
+    // }
+
+                    //    Other method
+           
+         setTimeout(() => {
+            let a = document.querySelector('.div')
+        a.style.backgroundColor = "red"
+        a.style.height = "300px"
+        a.style.width = "300px"
+        a.style.transition = "all 2s ease-in-out";
+        a.style.transform = "translation(200px,200px)"
+        a.style.borderRadius ="50%"
+         }, 1000);          
+
+
+    //    let a = 0;
+    //     setInterval(() => {
+    //         let a = a+10;
+    //         let b = document.querySelector('.div');
+    //         b.style.backgroundColor = "green"
+    //         b.style.transition = "all 2s ease-in-out"
+    //         // b.style.height = "100px"
+    //         // b.style.width = "100px"
+    //         b.style.marginleft = a + 'px';
+    //     }, 2000);
+    </script>
+</body>
+</html>

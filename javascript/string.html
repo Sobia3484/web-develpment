@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // let str = "web development"
+        // console.log(str);
+
+                                             // ----another method---- 
+        // let str = 'web development';
+        // console.log(str);
+        // console.log(typeof str); //it describe type
+        
+                                             // ----string length---- 
+        // let str = "web development"
+        // console.log(str.length);
+
+                                              //   ---string index----
+        // let str = "web development"
+        // console.log(str[5]);
+
+                                                   
+                                               //---template literals (special string)----
+        // let specialString = `this is a template literal ${1+6+9}`;
+        // console.log(specialString);
+
+                                               // --- Example of template literal 
+        // let obj = {
+        //     item: "Pen",
+        //     price: 50,
+        // }
+        // console.log("the price of",obj.item ,"is", obj.price ,"Rs");
+        //              // by using baktic
+        // console.log(`the price of ${obj.item} is ${obj.price} Rs`); 
+        //##the color of price will not change in the output because it's written in the form of string
+        // ${obj.item} are called the string interpolation
+
+                                            //--------Escape----
+        // console.log("web \ndevelopment"); //--\n and etc
+
+        // let str = "web \n development";  //--/n count one instead of two
+        // console.log(str.length);
+        
+                                           // -----string methods
+        // let str = 'web development';
+        // console.log(str);
+        // let newstr = console.log(str.toUpperCase()); // ##strinr are immutable(no change occure) & orignal string ma koi chnage occure nahi ata jab b koi cheeze change karni hoti ha to new string ma hoti ha original ma nahi
+         
+        // let str = 'web development';
+        // let newStr = str.toUpperCase();
+        // console.log(newStr);
+        
+        // let str = 'Web Development';
+        // let newStr = str.toLowerCase();
+        // console.log(newStr);
+
+        // let str = "         web development     "; //remove white space from start and end
+        // console.log(str.trim());
+        
+        // let str = 'Web Development';
+        // console.log(str.slice(3,8)); // slice(start,end) output ma ending index include nahi hota or ya optional b hota ha
+        
+                                                  // ----string concatination----
+        // let str1 = 'web';
+        // let str2 = 'development';
+        // // let res = str1.concat(str2); 
+        // let res = str1 + str2;  
+        // console.log(res);
+                               
+                                             //----replace---
+        // let str = 'hello';
+        // console.log(str.replace("l","y"));   // it replace just first letter
+        // console.log(str.replaceAll("l","y"));// it replace with all matching value
+
+                                        //---index value
+        // let str = "i love web development";
+        // console.log(str.charAt(1));
+                                       
+                                      //------##practice question
+        let fullName = prompt("Enter your full name");
+        let userName = "@" + fullName + fullName.length;
+        console.log(userName);
+
+                                    
+    </script>
+</body>
+</html>
